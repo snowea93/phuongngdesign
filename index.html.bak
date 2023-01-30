@@ -156,21 +156,20 @@
 			<div class="desktop-12 columns"><div class="border-top"></div></div>
 	 
 	 
-		
-	
-	<a href="wolfoo.html" class="permalink">
+		<a href="visily.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>Wolfoo website</h3>
-							<span class="category">UXUI - Web</span>
+							<h3>Visily</h3>
+							<span class="category">UI, Graphic, Motion graphics</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/wolfoo thumb.png" /></div>
+							<img src="images/visily_thumb.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
 				</a>
+	
 	
 	<a href="anami.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
@@ -186,19 +185,21 @@
 					</div><!-- // .desktop-3 -->
 				</a>
 	
-	<a href="fwdkooki.html" class="permalink">
+	<a href="unicharm3dm.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>FWD Kooki stickers</h3>
-							<span class="category">Digital, illustration</span>
+							<h3>Unicharm 3DM campaign</h3>
+							<span class="category">KV, Video</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/fwdkooki thumb.gif" /></div>
+							<img src="images/unicharm thumb.gif" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
 				</a>
+	
+	
 	
 	<a href="bobbysocial.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
@@ -242,66 +243,6 @@
 					</div><!-- // .desktop-3 -->
 				</a>
 		
-		<a href="n14.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>N14 restaurant</h3>
-							<span class="category">Branding</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-							<img src="images/n14 thumb.png" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-	
-	<a href="unicharm3dm.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Unicharm 3DM campaign</h3>
-							<span class="category">KV, Video</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-							<img src="images/unicharm thumb.gif" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-				
-				
-				<a href="unicharm3dmsocial.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Unicharm 3DM social</h3>
-							<span class="category">Social</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-							<img src="images/unc social thumb.png" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-	
-	
-			<a href="savagedog.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Savage Dog stickers</h3>
-							<span class="category">Illustration</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-						<img src="images/savagedog thumb.gif" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-		
-	
-		
 		<a href="video.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -317,7 +258,129 @@
 				</a>
 		
 		
+		<a href="n14.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>N14 restaurant</h3>
+							<span class="category">Branding</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/n14 thumb.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+	
+	<a href="wolfoo.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Wolfoo website</h3>
+							<span class="category">UXUI - Web</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/wolfoo thumb.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+	
+	
+	
+			
+			
+			<a href="ovengang.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>OvenGang Bakery</h3>
+							<span class="category">Branding, Packaging</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="imagesOvenGang_thumb-03.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+				
+					<a href="keyvisual.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Key Visual compilation</h3>
+							<span class="category">Layout</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+						<img src="images/kv thumb.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+			
+				
+					
+				
+		<a href="fwdkooki.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>FWD Kooki stickers</h3>
+							<span class="category">Digital, illustration</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/fwdkooki thumb.gif" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+				
+				
+				<a href="savagedog.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Savage Dog stickers</h3>
+							<span class="category">Illustration</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+						<img src="images/savagedog thumb.gif" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+				
+				
+				
 		
+				<a href="unicharm3dmsocial.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Unicharm 3DM social</h3>
+							<span class="category">Social</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/unc social thumb.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+			
+		<a href="insatiabledesires.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Insatiable Desires</h3>
+							<span class="category">Branding</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+						<img src="images/id thumb.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a>
+				
 		<a href="sunlightmicrosite.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -332,7 +395,7 @@
 					</div><!-- // .desktop-3 -->
 				</a>
 		
-		
+			
 		
 				<a href="surfstb.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
@@ -351,42 +414,18 @@
 		
 
 		
-		<a href="insatiabledesires.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Insatiable Desires</h3>
-							<span class="category">Branding</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-						<img src="images/id thumb.png" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
+	
 
 		
 	
 				
 			
-			<a href="keyvisual.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Key Visual compilation</h3>
-							<span class="category">Layout</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-						<img src="images/kv thumb.png" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
+		
 
 <a href="tresemme.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>TRESemme minisite</h3>
+							<h3>TRESemme microsite</h3>
 							<span class="category">UXUI</span>
 
 							<div class="imgwrapper">

@@ -45,12 +45,29 @@
 
 #carousel {
   position: relative;
-  margin-top: -20px;
+  margin-top: 0px;
+}
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0;
+}
+#divIDOne {
+     margin-right: 0px;
+ }
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 0;
+}
 
-
-
-
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #slides {
@@ -1121,7 +1138,7 @@ margin-top: -4px;
 			color: #b41f24;
 			font-size: 13px;
 			
-			margin-bottom:0px;
+			margin-bottom: 5 px;
 		font-weight: bold;}
 		
 		#projects .item span.category {
@@ -1193,7 +1210,7 @@ margin-top: -4px;
 		#archive .entry .box-meta span.date {
 			color: #595959;
 			font-size: 16px;
-			line-height: 18px;
+			margin-bottom: 5px;
 		}
 		
 	#projects .item h3 {
@@ -1272,7 +1289,7 @@ margin-top: -4px;
 		#projects .item h3 {
 			color: #b41f24;
 			font-size: 16px;
-			line-height: 18px;
+			margin-bottom: 9px;
 		font-weight: bold;
 		width: 300px;
 		}
@@ -1353,7 +1370,7 @@ margin-top: -4px;
 		#projects .item h3 {
 			color: #b41f24;
 			font-size: 16px;
-			line-height: 18px;
+		margin-bottom: 9px;
 		font-weight: bold;
 		width: 300px;}
 		
@@ -1431,7 +1448,7 @@ margin-top: -4px;
 		#projects .item h3 {
 			color: #b41f24;
 			font-size: 16px;
-			line-height: 18px;
+		margin-bottom: 9px;
 		font-weight: bold;
 		width: 300px;}
 		
@@ -1712,7 +1729,9 @@ span.members { font-weight:bold; color: #b41f24; }
 			}
 		}
 		
-
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
 
 		/* Map */
 		section#contact #map {
