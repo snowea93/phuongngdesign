@@ -147,7 +147,7 @@ $('#' + option).show();
 							<h4 class="border-top">OvenGang Bakery</h3>
 							
 
-							<p>The OvenGang logo was made using the shapes of choux and eclair in the negative space. The overall vibe of the identity is fun, friendly yet professional.  </p>
+							<p>The OvenGang logo was made using the shapes of Choux and Éclair in the negative space. The overall vibe of the identity is fun, friendly yet professional.  </p>
 						</div><!-- // .box-info -->
 				</div><!-- // .desktop-6 -->
 
@@ -181,6 +181,16 @@ $('#' + option).show();
 				<img src="images/ovengang1.png" alt="" />
 				<img src="images/ovengang2.png" alt="" />
 				<img src="images/ovengang 3.png" alt="" />
+			
+				'<div class="column">
+    <img src="images/ovengang 7.jpg" alt="" style="width:100%">
+  </div>
+	<div class="column">
+    <img src="images/ovengang7.png" alt="" style="width:100%">
+  </div>
+  
+				
+				
 				<img src="images/ovengang4.png" alt="" />
 
 
