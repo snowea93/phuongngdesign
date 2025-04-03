@@ -1330,6 +1330,25 @@ b, strong { font-weight: bold; }
             margin-bottom: 60px; 
         }
 
+/* Default spacing for desktop (above 767px) */
+#projects.single img {
+    margin-bottom: 60px;
+}
+
+/* Mobile spacing (767px and below) */
+@media screen and (max-width: 767px) {
+    #projects.single .desktop-12.columns img {
+        margin-bottom: 20px !important;
+    }
+    #projects.single .desktop-12.columns img:last-child {
+        margin-bottom: 20px !important;
+    }
+    #projects.single .desktop-12.columns {
+        padding-bottom: 0; /* Ensure no extra padding from container */
+    }
+}
+
+
         #projects.single .box-info {
             margin-bottom: 20px; 
         }
@@ -1985,7 +2004,16 @@ b, strong { font-weight: bold; }
 }
 
 @media screen and (max-width: 767px) {
-    #projects.single img {
-        margin-bottom: 20px; /* Reduced spacing for mobile */
+    #projects.single .desktop-12.columns img {
+        margin-bottom: 20px !important; /* Force override with !important */
+    }
+    #projects.single .desktop-12.columns img:last-child {
+        margin-bottom: 0 !important; /* Remove margin from the last image */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #projects.single .desktop-12.columns {
+        padding-bottom: 0; /* Remove any bottom padding */
     }
 }
