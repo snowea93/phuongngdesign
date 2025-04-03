@@ -2263,13 +2263,19 @@ body {
     box-sizing: border-box;     /* Include padding in width */
 }
 
-/* Restore desktop column layout (above 767px) */
+/* Restore default column layout for desktop (above 767px) */
 .column {
     float: left;
     width: 50%;                 /* Two columns by default */
     padding: 0;
     box-sizing: border-box;     /* Include padding in width */
 }
+
+/* Ensure typegrid desktop columns retain their widths */
+.desktop-12.columns { width: 100%; }
+.desktop-9.columns { width: 75%; }
+.desktop-6.columns { width: 50%; }
+.desktop-3.columns { width: 25%; }
 
 /* Clear floats after rows */
 .row::after {
@@ -2391,8 +2397,9 @@ body {
     }
 }
 
-/* Ensure desktop layout for projects.single (above 767px) */
+/* Ensure desktop layout for projects.single and index page (above 767px) */
 @media screen and (min-width: 768px) {
+    /* Restore #projects.single two-column layout */
     #projects.single .row .column {
         float: left;                /* Restore float for two-column layout */
         width: 50%;                 /* Two columns */
@@ -2421,6 +2428,31 @@ body {
     #projects.single img:last-of-type {
         margin-bottom: 0;           /* Only remove margin for the very last image */
     }
+
+    /* Restore sidebar layout in #projects.single */
+    #projects.single .sidebar.full-width .desktop-6.columns {
+        float: left;
+        width: 50%;                 /* Main content block */
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #projects.single .sidebar.full-width .desktop-3.columns {
+        float: left;
+        width: 25%;                 /* Category and Team blocks side-by-side */
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Restore index page project grid */
+    #projects .desktop-3.columns.project-item {
+        float: left;
+        width: 25%;                 /* Four items per row */
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #projects .item {
+        margin-bottom: 60px;        /* Restore default spacing */
+    }
 }
-
-
