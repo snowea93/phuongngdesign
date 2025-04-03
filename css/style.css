@@ -2319,3 +2319,109 @@ body {
         padding-right: 0;           /* Remove padding */
     }
 }
+
+/* Base styles for body and container */
+body {
+    overflow-x: hidden;         /* Prevent horizontal scrolling */
+    max-width: 100vw;           /* Limit to viewport width */
+    margin-left: 0;             /* Remove default margins */
+    margin-right: 0;            /* Remove default margins */
+    padding-left: 15px;         /* Consistent padding */
+    padding-right: 15px;        /* Consistent padding */
+    color: #111;
+    font-family: Neusa-Regular;
+    font-size: 14px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+.container {
+    max-width: 100%;            /* Full width */
+    overflow-x: hidden;         /* Prevent overflow */
+    padding-left: 0;            /* No extra padding here—body handles it */
+    padding-right: 0;           /* No extra padding here—body handles it */
+    box-sizing: border-box;     /* Include padding in width */
+}
+
+/* Mobile-specific adjustments for all pages */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 !important;       /* Override any margins */
+        padding-left: 15px;         /* Consistent padding on mobile */
+        padding-right: 15px;        /* Consistent padding on mobile */
+        width: 100vw;               /* Full viewport width */
+        overflow-x: hidden;         /* Prevent horizontal scroll */
+    }
+
+    .container {
+        width: 100%;                /* Full width */
+        max-width: 100%;            /* No overflow */
+        padding-left: 0;            /* Rely on body padding */
+        padding-right: 0;           /* Rely on body padding */
+        margin: 0 !important;       /* Remove margins */
+        overflow-x: hidden;         /* Prevent horizontal scroll */
+    }
+
+    /* Apply to all grid columns across pages */
+    .desktop-12.columns,
+    .desktop-9.columns,
+    .desktop-3.columns,
+    .desktop-6.columns,         /* Include other column sizes if used */
+    .column {
+        width: 100% !important;     /* Full width for all columns */
+        max-width: 100%;            /* Prevent overflow */
+        padding-left: 0;            /* No extra padding—body provides it */
+        padding-right: 0;           /* No extra padding—body provides it */
+        margin-left: 0 !important;  /* Remove margins */
+        margin-right: 0 !important; /* Remove margins */
+    }
+
+    /* Ensure images and content respect padding */
+    img,
+    .hinhprofile img,
+    #projects .item img,
+    #projects.single img {
+        width: 100%;                /* Full width within padded parent */
+        max-width: 100%;            /* Prevent overflow */
+        height: auto;               /* Maintain aspect ratio */
+        margin-left: 0;             /* Align with padding */
+        margin-right: 0;            /* Align with padding */
+    }
+
+    /* Text content adjustments */
+    .page-desc,
+    .page-desc2,
+    .page-desc3,
+    #projects .item h3,
+    #projects .item span.category,
+    #projects .item p.excerpt {
+        width: 100%;                /* Full width */
+        margin-left: 0;             /* Align with padding */
+        margin-right: 0;            /* Align with padding */
+    }
+
+    /* Specific section tweaks */
+    #about .hinhprofile,
+    #projects .project-item {
+        width: 100%;                /* Full width */
+        margin: 0 auto;             /* Center if needed */
+    }
+
+    #about .border-top,
+    #projects.single .border-top {
+        width: 100%;                /* Full width */
+        margin-left: 0;             /* Align with content */
+        padding-left: 0;            /* No extra padding */
+        padding-right: 0;           /* No extra padding */
+    }
+
+    /* Ensure consistent spacing */
+    #projects.single .desktop-12.columns img,
+    #projects.single .row .column img {
+        margin-bottom: 20px !important; /* Consistent spacing */
+    }
+    #projects.single img:last-of-type {
+        margin-bottom: 0 !important;    /* No margin on last image */
+    }
+}
