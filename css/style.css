@@ -2263,6 +2263,21 @@ body {
     box-sizing: border-box;     /* Include padding in width */
 }
 
+/* Restore desktop column layout (above 767px) */
+.column {
+    float: left;
+    width: 50%;                 /* Two columns by default */
+    padding: 0;
+    box-sizing: border-box;     /* Include padding in width */
+}
+
+/* Clear floats after rows */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* Mobile-specific adjustments for all pages */
 @media screen and (max-width: 767px) {
     body {
@@ -2283,13 +2298,14 @@ body {
         overflow-x: hidden;         /* Prevent horizontal scroll */
     }
 
-    /* Ensure grid columns respect body padding */
+    /* Stack columns vertically on mobile */
     .desktop-12.columns,
     .desktop-9.columns,
     .desktop-6.columns,
     .desktop-3.columns,
     .column {
-        width: 100% !important;     /* Full width within padded container */
+        float: none !important;     /* Stack vertically */
+        width: 100% !important;     /* Full width */
         max-width: 100%;            /* Prevent overflow */
         padding-left: 0 !important; /* No extra padding—body provides it */
         padding-right: 0 !important; /* No extra padding—body provides it */
@@ -2313,7 +2329,7 @@ body {
         padding-right: 0;           /* No extra padding on images */
     }
 
-    /* Consistent spacing between images */
+    /* Consistent spacing between images on mobile */
     #projects.single .desktop-12.columns img,
     #projects.single .row .column img {
         margin-bottom: 20px !important; /* Space between images */
@@ -2324,7 +2340,7 @@ body {
         margin-bottom: 0 !important;    /* No margin on final image */
     }
 
-    /* Fix .row and .column layout */
+    /* Fix .row layout on mobile */
     .row {
         width: 100%;                /* Full width within padded container */
         margin-left: 0 !important;  /* Remove any offsets */
@@ -2333,14 +2349,7 @@ body {
         padding-right: 0;           /* No extra padding */
     }
 
-    .column {
-        float: none !important;     /* Stack columns vertically */
-        width: 100% !important;     /* Full width within padded container */
-        padding: 0 !important;      /* No padding—body handles it */
-        margin: 0 !important;       /* No margins */
-    }
-
-    /* Ensure text respects padding */
+    /* Ensure text respects padding on mobile */
     .page-desc,
     .page-desc2,
     .page-desc3,
@@ -2371,7 +2380,7 @@ body {
         padding-right: 0;           /* No extra padding */
     }
 
-    /* Fix iframes (YouTube videos) */
+    /* Fix iframes (YouTube videos) on mobile */
     iframe {
         width: 100% !important;     /* Full width within padded container */
         max-width: 100%;            /* Prevent overflow */
@@ -2381,4 +2390,37 @@ body {
         margin-right: 0 !important; /* Align with padding */
     }
 }
+
+/* Ensure desktop layout for projects.single (above 767px) */
+@media screen and (min-width: 768px) {
+    #projects.single .row .column {
+        float: left;                /* Restore float for two-column layout */
+        width: 50%;                 /* Two columns */
+        padding: 0;                 /* No padding */
+        box-sizing: border-box;     /* Include padding in width */
+    }
+
+    #projects.single .desktop-12.columns {
+        width: 100%;                /* Full width for single-column full-width items */
+        padding: 0;                 /* No padding */
+    }
+
+    #projects.single .desktop-12.columns img,
+    #projects.single .row .column img {
+        width: 100%;                /* Full width of parent */
+        max-width: 100%;            /* Prevent overflow */
+        height: auto;               /* Maintain aspect ratio */
+        margin-bottom: 60px;        /* Restore default desktop spacing */
+    }
+
+    #projects.single .desktop-12.columns img:last-child,
+    #projects.single .row .column:last-child img {
+        margin-bottom: 60px;        /* Keep consistent spacing unless last in section */
+    }
+
+    #projects.single img:last-of-type {
+        margin-bottom: 0;           /* Only remove margin for the very last image */
+    }
+}
+
 
