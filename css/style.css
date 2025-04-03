@@ -1970,16 +1970,22 @@ b, strong { font-weight: bold; }
 
     .filter-container {
         width: 100%; /* Full width on mobile */
-        justify-content: center; /* Center filter items on mobile */
+        justify-content: flex-start; /* Center filter items on mobile */
     }
 
     .filter-list {
         flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: center; /* Center items horizontally */
+        justify-content: flex-start; /* Center items horizontally */
         gap: 15px; /* Slightly smaller gap on mobile */
     }
 
     .filter-link {
         font-size: 16px; /* Slightly smaller on mobile */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #projects.single img {
+        margin-bottom: 20px; /* Reduced spacing for mobile */
     }
 }
