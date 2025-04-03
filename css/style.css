@@ -1316,7 +1316,7 @@ b, strong { font-weight: bold; }
 /* Portfolio Layout */
 .portfolio-wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 20px;
     padding-top: 20px;
     flex-wrap: wrap;
@@ -1325,7 +1325,7 @@ b, strong { font-weight: bold; }
 /* Filter Styles */
 .filter-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-top: 20px;
     width: 100%;
 }
