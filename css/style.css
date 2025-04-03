@@ -1335,7 +1335,7 @@ b, strong { font-weight: bold; }
     margin-bottom: 60px;
 }
 
-/* Mobile spacing (767px and below) */
+/* Mobile spacing (767px and below) try again*/
 @media screen and (max-width: 767px) {
     #projects.single .desktop-12.columns img {
         margin-bottom: 20px !important;
