@@ -2197,3 +2197,41 @@ b, strong { font-weight: bold; }
         margin-bottom: 0 !important; /* Only the final image has no bottom margin */
     }
 }
+
+@media screen and (max-width: 767px) {
+    /* Apply uniform margin to all images in #projects.single */
+    #projects.single img {
+        margin-bottom: 20px !important;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Remove margin only from the very last image in #projects.single */
+    #projects.single img:last-of-type {
+        margin-bottom: 0 !important;
+    }
+
+    /* Ensure layout consistency */
+    #projects.single .desktop-12.columns,
+    #projects.single .row .column {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Fix row clearfix */
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Ensure columns stack properly */
+    .column {
+        float: none;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+}
