@@ -2219,7 +2219,7 @@ body {
 @media screen and (max-width: 767px) {
     body {
         margin: 0 !important;       /* Override any margins */
-        padding: 0 !important;      /* Reset padding */
+        padding: 15px !important;      /* Reset padding */
         width: 100vw;               /* Full viewport width */
         overflow-x: hidden;         /* Prevent horizontal scroll */
     }
@@ -2242,5 +2242,4 @@ body {
         overflow-x: hidden;         /* Prevent horizontal overflow */
     }
 }
-
 
