@@ -1338,10 +1338,10 @@ b, strong { font-weight: bold; }
 /* Mobile spacing (767px and below) */
 @media screen and (max-width: 767px) {
     #projects.single .desktop-12.columns img {
-        margin-bottom: 20px !important;
+        margin-bottom: 40px !important;
     }
     #projects.single .desktop-12.columns img:last-child {
-        margin-bottom: 20px !important;
+        margin-bottom: 40px !important;
     }
     #projects.single .desktop-12.columns {
         padding-bottom: 0; /* Ensure no extra padding from container */
