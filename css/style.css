@@ -2247,8 +2247,8 @@ body {
 body {
     overflow-x: hidden;
     max-width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .container {
