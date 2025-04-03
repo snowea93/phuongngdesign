@@ -311,6 +311,39 @@ $('#' + option).show();
 
 	<script src="js/jquery.custom.js"></script>
 
+<!-- JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jQuery.BlackAndWhite.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/less-1.4.0.min.js"></script>
+<script src="js/jquery.typeMenu.js"></script>
+<script src="js/jquery.typeSticky.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script src="js/lightbox.js"></script>
+
+<!-- Inline script moved and updated -->
+<script type="text/javascript">
+$(document).ready(function() {
+    var option = 'coke'; // Default value
+    var url = window.location.href;
+    var match = url.match(/option=(.*)/);
+    if (match && match[1]) {
+        option = match[1];
+    }
+    showDiv(option);
+});
+
+function showDiv(option) {
+    $('.boxes').hide();
+    $('#' + option).show();
+}
+</script>
+
+<!-- Cloudflare script -->
+<script>(function(){...})();</script>
+</body>
+</html>
+
 
 <!-- End Document
 ================================================== -->
