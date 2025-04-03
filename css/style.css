@@ -1338,10 +1338,10 @@ b, strong { font-weight: bold; }
 /* Mobile spacing (767px and below) */
 @media screen and (max-width: 767px) {
     #projects.single .desktop-12.columns img {
-        margin-bottom: 40px !important;
+        margin-bottom: 20px !important;
     }
     #projects.single .desktop-12.columns img:last-child {
-        margin-bottom: 40px !important;
+        margin-bottom: 0px !important;
     }
     #projects.single .desktop-12.columns {
         padding-bottom: 0; /* Ensure no extra padding from container */
@@ -2005,7 +2005,7 @@ b, strong { font-weight: bold; }
 
 @media screen and (max-width: 767px) {
     #projects.single .desktop-12.columns img {
-        margin-bottom: 40px !important; /* Force override with !important */
+        margin-bottom: 20px !important; /* Force override with !important */
     }
     #projects.single .desktop-12.columns img:last-child {
         margin-bottom: 0 !important; /* Remove margin from the last image */
@@ -2014,7 +2014,7 @@ b, strong { font-weight: bold; }
 
 @media screen and (max-width: 767px) {
     #projects.single .desktop-12.columns {
-        padding-bottom: 40px; /* Remove any bottom padding */
+        padding-bottom: 20px; /* Remove any bottom padding */
     }
 }
 
