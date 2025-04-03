@@ -2184,3 +2184,16 @@ b, strong { font-weight: bold; }
         width: 100% !important;
     }
 }
+
+@media screen and (max-width: 767px) {
+    /* Reset all image margins uniformly */
+    #projects.single .desktop-12.columns img,
+    #projects.single .row .column img {
+        margin-bottom: 20px !important; /* Consistent spacing between all images */
+    }
+
+    /* Remove margin only from the very last image in the entire #projects.single section */
+    #projects.single img:last-of-type {
+        margin-bottom: 0 !important; /* Only the final image has no bottom margin */
+    }
+}
