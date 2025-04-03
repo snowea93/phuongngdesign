@@ -2017,3 +2017,23 @@ b, strong { font-weight: bold; }
         padding-bottom: 0; /* Remove any bottom padding */
     }
 }
+
+/* Ensure consistent image width on mobile */
+@media screen and (max-width: 767px) {
+    #projects.single .desktop-12.columns {
+        padding-left: 0;  /* Remove any left padding */
+        padding-right: 0; /* Remove any right padding */
+    }
+    #projects.single .desktop-12.columns img,
+    #projects.single .row .column img {
+        width: 100%;      /* Full width of parent container */
+        max-width: 100%;  /* Prevent overflow */
+        display: block;   /* Ensure proper block behavior */
+        margin-left: auto; /* Center if needed */
+        margin-right: auto;
+    }
+    #projects.single .row .column {
+        width: 100%;      /* Stack columns as already defined */
+        padding: 0;       /* Remove any padding affecting width */
+    }
+}
