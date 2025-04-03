@@ -2215,3 +2215,32 @@ body {
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Ensure no elements overflow on mobile */
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 !important;       /* Override any margins */
+        padding: 0 !important;      /* Reset padding */
+        width: 100vw;               /* Full viewport width */
+        overflow-x: hidden;         /* Prevent horizontal scroll */
+    }
+    .container {
+        width: 100%;                /* Full width */
+        max-width: 100%;            /* No overflow */
+        padding-left: 15px;         /* Consistent padding */
+        padding-right: 15px;
+        margin: 0 !important;       /* Remove margins */
+        overflow-x: hidden;         /* Hide overflow */
+    }
+    /* Fix project items to stay within bounds */
+    #projects .project-item {
+        max-width: 100%;            /* Prevent overflow */
+        box-sizing: border-box;     /* Include padding/margins in width */
+    }
+    /* Fix filter container */
+    .filter-container {
+        max-width: 100%;            /* Stay within viewport */
+        overflow-x: hidden;         /* Prevent horizontal overflow */
+    }
+}
+
+
