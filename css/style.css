@@ -1414,10 +1414,11 @@ b, strong { font-weight: bold; }
 }
 
 /* Responsive Media Queries */
+
 @media screen and (max-width: 767px) {
     body {
-        margin: 0 !important;
-        padding-left: 15px !important; /* Keep consistent padding */
+        margin: 0 !important; /* Reset any margins */
+        padding-left: 15px !important; /* Consistent padding */
         padding-right: 15px !important;
         width: 100vw;
         overflow-x: hidden;
@@ -1440,8 +1441,7 @@ b, strong { font-weight: bold; }
     .desktop-9.columns,
     .desktop-6.columns,
     .desktop-3.columns,
-    .column,
-    #projects .project-item {
+    .column {
         float: none !important;
         width: 100% !important;
         max-width: 100%;
@@ -1454,37 +1454,39 @@ b, strong { font-weight: bold; }
     /* Project items in 2-column layout */
     #projects .project-item {
         float: left !important;
-        width: 50% !important;
-        padding: 0 5px !important; /* Consistent padding for spacing */
+        width: 50% !important; /* Two columns */
+        padding: 0 5px !important; /* Consistent inner spacing */
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
-    /* Ensure container respects floated children */
-    #projects .container {
-        overflow: hidden;
+    /* Clear floats properly */
+    #projects .container::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     /* Filter adjustments for single line */
     .filter-container {
         width: 100%;
-        justify-content: flex-start; /* Align left but allow overflow handling */
-        padding: 10px 0; /* Reduce vertical padding */
+        justify-content: flex-start;
+        padding: 10px 0;
     }
 
     .filter-list {
-        flex-wrap: nowrap !important; /* Prevent wrapping */
+        flex-wrap: nowrap !important;
         justify-content: flex-start;
-        gap: 10px !important; /* Reduce gap to fit items */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
-        white-space: nowrap; /* Keep items in one line */
-        padding: 0 !important; /* Remove inline padding from HTML */
+        gap: 10px !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0 !important; /* Override inline padding */
     }
 
     .filter-link {
-        font-size: 14px !important; /* Slightly smaller to fit */
-        padding: 0 5px; /* Minimal padding for spacing */
+        font-size: 16px !important;
+        padding: 0 5px;
     }
-
     /* Project page images and spacing */
     #projects.single .desktop-12.columns img,
     #projects.single .row .column img {
@@ -1507,7 +1509,7 @@ b, strong { font-weight: bold; }
         margin-bottom: 0; /* Handled by project-item */
     }
 
-    /* Sidebar adjustments (unchanged from your request) */
+    /* Sidebar adjustments */
     .sidebar.full-width .desktop-3.columns {
         float: left !important;
         width: 50% !important;
@@ -1771,5 +1773,49 @@ b, strong { font-weight: bold; }
 /* Ensure default behavior remains intact */
 .sidebar.full-width .desktop-3 {
   box-sizing: border-box;
+}
+
+/* Ensure consistent padding and centering */
+body {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 !important; /* Reset any rogue margins */
+}
+
+.container {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#projects .container {
+    overflow: hidden; /* Contain floats */
+}
+
+.desktop-3.columns.project-item {
+    float: left;
+    width: 25%; /* Default desktop width */
+    padding: 0; /* Rely on body padding */
+    margin: 0 0 60px 0;
+    box-sizing: border-box;
+}
+
+/* Reset conflicting media query margins */
+@media screen and (min-width: 768px) and (max-width: 959px),
+@media screen and (min-width: 960px) and (max-width: 1299px),
+@media screen and (min-width: 1300px) and (max-width: 1599px) {
+    body {
+        margin-left: 0 !important; /* Remove left margin */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .desktop-3.columns.project-item {
+        float: left;
+        width: 25%; /* Ensure 4 columns */
+        padding: 0;
+        margin: 0 0 60px 0;
+    }
 }
 
