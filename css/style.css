@@ -1417,7 +1417,7 @@ b, strong { font-weight: bold; }
 @media screen and (max-width: 767px) {
     body {
         margin: 0 !important;
-        padding-left: 15px !important;
+        padding-left: 15px !important; /* Keep consistent padding */
         padding-right: 15px !important;
         width: 100vw;
         overflow-x: hidden;
@@ -1429,13 +1429,13 @@ b, strong { font-weight: bold; }
     .container {
         width: 100%;
         max-width: 100%;
-        padding-left: 0 !important;
+        padding-left: 0 !important; /* Rely on body padding */
         padding-right: 0 !important;
-        margin: 0 !important;
+        margin: 0 auto !important; /* Center the container */
         overflow-x: hidden;
     }
 
-    /* Stack all columns vertically */
+    /* Stack all columns vertically by default */
     .desktop-12.columns,
     .desktop-9.columns,
     .desktop-6.columns,
@@ -1449,6 +1449,40 @@ b, strong { font-weight: bold; }
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box;
+    }
+
+    /* Project items in 2-column layout */
+    #projects .project-item {
+        float: left !important;
+        width: 50% !important;
+        padding: 0 5px !important; /* Consistent padding for spacing */
+        margin-bottom: 20px;
+    }
+
+    /* Ensure container respects floated children */
+    #projects .container {
+        overflow: hidden;
+    }
+
+    /* Filter adjustments for single line */
+    .filter-container {
+        width: 100%;
+        justify-content: flex-start; /* Align left but allow overflow handling */
+        padding: 10px 0; /* Reduce vertical padding */
+    }
+
+    .filter-list {
+        flex-wrap: nowrap !important; /* Prevent wrapping */
+        justify-content: flex-start;
+        gap: 10px !important; /* Reduce gap to fit items */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        white-space: nowrap; /* Keep items in one line */
+        padding: 0 !important; /* Remove inline padding from HTML */
+    }
+
+    .filter-link {
+        font-size: 14px !important; /* Slightly smaller to fit */
+        padding: 0 5px; /* Minimal padding for spacing */
     }
 
     /* Project page images and spacing */
@@ -1469,27 +1503,21 @@ b, strong { font-weight: bold; }
         margin-bottom: 20px;
     }
 
-    #projects .item { margin-bottom: 20px; }
-
-    /* Portfolio wrapper and filter */
-    .portfolio-wrapper {
-        flex-direction: column;
-        justify-content: center;
+    #projects .item {
+        margin-bottom: 0; /* Handled by project-item */
     }
 
-    .filter-container {
-        width: 100%;
-        justify-content: flex-start;
+    /* Sidebar adjustments (unchanged from your request) */
+    .sidebar.full-width .desktop-3.columns {
+        float: left !important;
+        width: 50% !important;
+        padding: 0 5px !important;
     }
 
-    .filter-list {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 15px;
-    }
-
-    .filter-link {
-        font-size: 16px;
+    .sidebar.full-width .desktop-6.columns {
+        float: none !important;
+        width: 100% !important;
+        padding: 0 !important;
     }
 
     /* Footer */
@@ -1513,98 +1541,30 @@ b, strong { font-weight: bold; }
     }
 
     /* About */
-    #about .services h4 { margin-top: 40px; }
-    #about .services p { font-size: 12px; line-height: 24px; }
+    #about .services h4 {
+        margin-top: 40px;
+    }
+    #about .services p {
+        font-size: 12px;
+        line-height: 24px;
+    }
 
     /* Home */
-    .box-recent a.permalink h4 { font-size: 16px; line-height: 18px; }
-    .box-about p.tagline { font-size: 20px; line-height: 36px; }
-
-    /* Contact */
-    section#contact .box-contact { font-size: 16px; line-height: 18px; margin-bottom: 30px; }
-}
-
-@media screen and (max-width: 767px) {
-    /* Existing mobile rules */
-    body {
-        margin: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        width: 100vw;
-        overflow-x: hidden;
-        box-sizing: border-box;
+    .box-recent a.permalink h4 {
         font-size: 16px;
         line-height: 18px;
     }
-
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin: 0 !important;
-        overflow-x: hidden;
+    .box-about p.tagline {
+        font-size: 20px;
+        line-height: 36px;
     }
 
-    /* Stack all columns vertically - existing rule */
-    .desktop-12.columns,
-    .desktop-9.columns,
-    .desktop-6.columns,
-    .desktop-3.columns,
-    .column,
-    #projects .project-item {
-        float: none !important;
-        width: 100% !important;
-        max-width: 100%;
-        padding: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box;
+    /* Contact */
+    section#contact .box-contact {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 30px;
     }
-
-    /* Override for project items to create 2 columns on mobile */
-    #projects .project-item {
-        float: left !important;     /* Restore float for 2-column layout */
-        width: 50% !important;      /* 2 columns: each item takes half the width */
-        padding: 0 5px !important;  /* Add small padding for spacing between columns */
-        margin-bottom: 20px;        /* Consistent spacing between rows */
-    }
-
-    /* Ensure container respects the floated layout */
-    #projects .container {
-        overflow: hidden;           /* Contain floated children */
-    }
-
-    /* Adjust item content for mobile */
-    #projects .item {
-        margin-bottom: 0;           /* Remove extra margin since project-item handles it */
-    }
-
-    /* Existing mobile rules continue... */
-    #projects.single .desktop-12.columns img,
-    #projects.single .row .column img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto;
-        display: block;
-        margin-bottom: 20px !important;
-    }
-
-    /* Rest of your existing mobile rules... */
-
-    /* NEW RULES: Adjust sidebar columns for Category and Team */
-    .sidebar.full-width .desktop-3.columns {
-        float: left !important;     /* Float to place side by side */
-        width: 50% !important;      /* Each takes half the width */
-        padding: 0 5px !important;  /* Small padding for spacing */
-    }
-
-    .sidebar.full-width .desktop-6.columns {
-        float: none !important;     /* Ensure description stays full-width */
-        width: 100% !important;
-        padding: 0 !important;
-    }
-
 }
 
 @media screen and (min-width: 1600px) { 
