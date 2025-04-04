@@ -497,6 +497,8 @@ b, strong { font-weight: bold; }
             color: #595959;
             padding: 25px 0;
             border-bottom: 1px solid #222;
+font-size: 18px;
+line-height: 21px;
         }
 
     ul#nav > li {
@@ -617,6 +619,32 @@ b, strong { font-weight: bold; }
                 padding: 12px 0;
                 border-bottom: 1px solid #f5f5f5;
             }
+
+/* Mobile Menu */
+@media screen and (max-width: 767px) { 
+    #menu-mobile-wrapper { display: block; }
+    
+    #menu-mobile-wrapper ul#menu-mobile li a {
+        color: #444;
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 16px; /* Top-level mobile items */
+        line-height: 21px;
+    }
+    
+    #menu-mobile-wrapper ul#menu-mobile li ul a {
+        color: #444;
+        display: block;
+        padding: 12px 0 12px 20px; /* Indent dropdowns */
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 16px; /* Dropdown items match top-level */
+        line-height: 21px;
+    }
+    
+    #menu-mobile-wrapper ul#menu-mobile li a:hover,
+    #menu-mobile-wrapper ul#menu-mobile li ul a:hover { color: #b41f24; }
+}
 
             #menu-mobile-wrapper ul#menu-mobile li a:hover { color: #b41f24; }
 
@@ -1549,11 +1577,35 @@ b, strong { font-weight: bold; }
         width: 100%;
     }
 
+/* Specific styling for Send Message button to halve its height */
+section#contact input.button.full {
+    padding: 15px 40px 13px 40px; /* Halved vertical padding: 30->15, 26->13 */
+    font-size: 18px;              /* Kept font-size for readability */
+    border-bottom: 2px solid #b41f24; /* Halved border: 4px->2px */
+    border-radius: 5px;           /* Matches original .button.full */
+    width: 100%;
+    display: block;
+    color: white;
+    background: #b41f24;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Hover state to match original behavior */
+section#contact input.button.full:hover {
+    background: #b41f24; /* Maintains original hover color */
+}
+
     /* Map */
     section#contact #map {
         height: 500px;
         margin-bottom: 30px;
     }
+
+
 
     /*---------------------------------------------------
             3.9 Footer
