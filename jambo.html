@@ -203,7 +203,7 @@ $('#' + option).show();
     <img src="images/JAMBOSOLANA.png" alt="">
   </div>
   <div class="column">
-    <img src="images/JAMBOSOLANA2.PNG" alt="">
+    <img src="images/JAMBOSOLANA2.png" alt="">
   </div> </div>
   
 
@@ -237,6 +237,61 @@ $('#' + option).show();
 		</div><!-- // .container -->
 	</section><!-- // section#footer -->
 
+
+	<!-- JS
+	================================================== -->
+	<!-- 
+		Flexslider 2.1 has known issues of manualControls setting with jQuery 1.9~
+		Use jQuery 1.8 until Flexslider 2.2 stable version is released
+	-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+	<script src="js/jQuery.BlackAndWhite.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/less-1.4.0.min.js"></script>
+	<script src="js/jquery.typeMenu.js"></script>
+	<script src="js/jquery.typeSticky.js"></script>
+
+
+	
+
+	
+
+
+	
+
+
+	<script src="js/jquery.custom.js"></script>
+
+<!-- JS -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/jQuery.BlackAndWhite.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/less-1.4.0.min.js"></script>
+<script src="js/jquery.typeMenu.js"></script>
+<script src="js/jquery.typeSticky.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script src="js/lightbox.js"></script>
+
+<!-- Inline script moved and updated -->
+<script type="text/javascript">
+$(document).ready(function() {
+    var option = 'coke'; // Default value
+    var url = window.location.href;
+    var match = url.match(/option=(.*)/);
+    if (match && match[1]) {
+        option = match[1];
+    }
+    showDiv(option);
+});
+
+function showDiv(option) {
+    $('.boxes').hide();
+    $('#' + option).show();
+}
+</script>
+
+<!-- Cloudflare script -->
+<script>(function(){...})();</script>
 </body>
 </html>
 
