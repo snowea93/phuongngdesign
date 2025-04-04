@@ -622,75 +622,82 @@ b, strong { font-weight: bold; }
     /*---------------------------------------------------
             3.2 Header
     ---------------------------------------------------*/
-  /*---------------------------------------------------
+   /*---------------------------------------------------
     3.2 Header
 ---------------------------------------------------*/
 
 .topbar {
-    margin-right: 0; /* Remove excessive right margin to balance */
-    padding: 0 15px; /* Match body padding for consistency */
+    margin: 0; /* Remove any margins */
+    padding: 0 15px; /* Match body padding */
+    overflow: hidden; /* Contain floats */
 }
 
 #header .logo-wrap {
-    margin: 20px 0 0 0; /* Reset top margin, keep consistent */
-    overflow: hidden; /* Contain floats */
+    margin: 20px 0 0 0;
+    overflow: hidden; /* Contain floats and prevent overflow */
+    background: transparent; /* Ensure no background bleed */
 }
 
 .logo {
     max-width: 35%; /* Default desktop width */
-    float: left; /* Explicitly float left */
+    float: left;
     box-sizing: border-box;
+    background: none; /* Prevent background artifacts */
 }
 
 .desktop-6.columns {
     width: 50%;
     float: left;
     box-sizing: border-box;
+    background: none; /* Prevent background artifacts */
+    border: none; /* Remove any borders */
 }
 
 .site-desc {
-    width: 50%; /* Match logo width to fill space */
+    width: 50%; /* Match logo width */
     position: relative;
     color: #595959;
-    padding-top: 0; /* Remove negative padding */
-    float: left; /* Float alongside logo */
+    float: left;
     box-sizing: border-box;
+    background: none; /* Prevent background artifacts */
+    border: none; /* Remove any borders */
 }
 
 .logo-wrap .clear {
-    clear: both; /* Ensure all floats are cleared */
-    height: 0; /* Minimize height impact */
+    clear: both;
+    height: 0;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 767px) {
     .logo {
-        max-width: 30%; /* Mobile adjustment */
+        max-width: 30%;
         float: left;
     }
     .site-desc {
-        width: 70%; /* Adjust to fit mobile layout */
+        width: 70%;
         float: left;
     }
     #header .logo-wrap {
-        margin: 25px 0 20px 0; /* Match mobile media query */
+        margin: 25px 0 20px 0;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
     .logo {
-        max-width: 40%; /* Adjust per your media query */
+        max-width: 40%;
     }
     .site-desc {
-        width: 60%; /* Adjust to balance */
+        width: 60%;
     }
 }
 
-/* Ensure no overflow or artifacts */
+/* Ensure no overflow in header */
 #header {
-    overflow: hidden; /* Contain any stray elements */
+    overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+    background: transparent; /* Prevent background bleed */
 }
 
     /*---------------------------------------------------
@@ -1468,8 +1475,8 @@ b, strong { font-weight: bold; }
 
 @media screen and (max-width: 767px) {
     body {
-        margin: 0 !important; /* Reset any margins */
-        padding-left: 15px !important; /* Consistent padding */
+        margin: 0 !important;
+        padding-left: 15px !important;
         padding-right: 15px !important;
         width: 100vw;
         overflow-x: hidden;
@@ -1481,13 +1488,12 @@ b, strong { font-weight: bold; }
     .container {
         width: 100%;
         max-width: 100%;
-        padding-left: 0 !important; /* Rely on body padding */
+        padding-left: 0 !important;
         padding-right: 0 !important;
-        margin: 0 auto !important; /* Center the container */
+        margin: 0 auto !important;
         overflow-x: hidden;
     }
 
-    /* Stack all columns vertically by default */
     .desktop-12.columns,
     .desktop-9.columns,
     .desktop-6.columns,
@@ -1502,27 +1508,26 @@ b, strong { font-weight: bold; }
         box-sizing: border-box;
     }
 
-    /* Project items in 2-column layout */
     #projects .project-item {
         float: left !important;
-        width: 50% !important; /* Two columns */
-        padding: 0 5px !important; /* Consistent inner spacing */
+        width: 50% !important;
+        padding: 0 5px !important;
         margin-bottom: 20px;
         box-sizing: border-box;
     }
 
-    /* Clear floats properly */
     #projects .container::after {
         content: "";
         display: table;
         clear: both;
     }
 
-    /* Filter adjustments for single line */
+    /* Filter adjustments */
     .filter-container {
         width: 100%;
         justify-content: flex-start;
         padding: 10px 0;
+        overflow: hidden; /* Prevent overflow artifacts */
     }
 
     .filter-list {
@@ -1531,13 +1536,23 @@ b, strong { font-weight: bold; }
         gap: 10px !important;
         overflow-x: auto;
         white-space: nowrap;
-        padding: 0 !important; /* Override inline padding */
+        padding: 0 !important;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        scrollbar-width: none; /* Firefox: hide scrollbar */
+        -ms-overflow-style: none; /* IE/Edge: hide scrollbar */
+    }
+
+    /* Chrome, Safari: hide scrollbar */
+    .filter-list::-webkit-scrollbar {
+        display: none;
     }
 
     .filter-link {
-        font-size: 16px !important;
+        font-size: 18px !important; /* From your previous request */
         padding: 0 5px;
+        line-height: 21px;
     }
+
     /* Project page images and spacing */
     #projects.single .desktop-12.columns img,
     #projects.single .row .column img {
@@ -1557,10 +1572,9 @@ b, strong { font-weight: bold; }
     }
 
     #projects .item {
-        margin-bottom: 0; /* Handled by project-item */
+        margin-bottom: 0;
     }
 
-    /* Sidebar adjustments */
     .sidebar.full-width .desktop-3.columns {
         float: left !important;
         width: 50% !important;
@@ -1573,7 +1587,6 @@ b, strong { font-weight: bold; }
         padding: 0 !important;
     }
 
-    /* Footer */
     #footer ul#social {
         margin-top: 30px;
     }
@@ -1586,14 +1599,12 @@ b, strong { font-weight: bold; }
         border-top: 1px solid #eee;
     }
 
-    /* Lightbox */
     .lightbox-close {
         top: -20px;
         right: -20px;
         font-size: 30px;
     }
 
-    /* About */
     #about .services h4 {
         margin-top: 40px;
     }
@@ -1602,7 +1613,6 @@ b, strong { font-weight: bold; }
         line-height: 24px;
     }
 
-    /* Home */
     .box-recent a.permalink h4 {
         font-size: 16px;
         line-height: 18px;
@@ -1612,14 +1622,12 @@ b, strong { font-weight: bold; }
         line-height: 36px;
     }
 
-    /* Contact */
     section#contact .box-contact {
         font-size: 16px;
         line-height: 18px;
         margin-bottom: 30px;
     }
 }
-
 @media screen and (min-width: 1600px) { 
     #projects.stackgrid .item { width: 20%; }
     .logo {width:100%;}
@@ -1868,28 +1876,5 @@ body {
         padding: 0;
         margin: 0 0 60px 0;
     }
-}
-
-/* Prevent overflow artifacts in header */
-#header,
-.topbar,
-.logo-wrap {
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Reset any stray margins or padding */
-#header * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Ensure body padding applies */
-body {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    margin: 0 !important;
 }
 
