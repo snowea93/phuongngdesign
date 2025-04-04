@@ -622,25 +622,76 @@ b, strong { font-weight: bold; }
     /*---------------------------------------------------
             3.2 Header
     ---------------------------------------------------*/
-    .topbar {margin-right: 85px;}
-    
-    #header .logo-wrap2 { margin: 20px 0 0px 0; }
-    
-    .logo{
-        max-width: 35%;
-    }
+  /*---------------------------------------------------
+    3.2 Header
+---------------------------------------------------*/
 
-    #header h1 {
-        width: 100%;
-        display: block;
-    }
+.topbar {
+    margin-right: 0; /* Remove excessive right margin to balance */
+    padding: 0 15px; /* Match body padding for consistency */
+}
 
+#header .logo-wrap {
+    margin: 20px 0 0 0; /* Reset top margin, keep consistent */
+    overflow: hidden; /* Contain floats */
+}
+
+.logo {
+    max-width: 35%; /* Default desktop width */
+    float: left; /* Explicitly float left */
+    box-sizing: border-box;
+}
+
+.desktop-6.columns {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.site-desc {
+    width: 50%; /* Match logo width to fill space */
+    position: relative;
+    color: #595959;
+    padding-top: 0; /* Remove negative padding */
+    float: left; /* Float alongside logo */
+    box-sizing: border-box;
+}
+
+.logo-wrap .clear {
+    clear: both; /* Ensure all floats are cleared */
+    height: 0; /* Minimize height impact */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+    .logo {
+        max-width: 30%; /* Mobile adjustment */
+        float: left;
+    }
     .site-desc {
-        position: relative;
-        color: #595959;
-        width: 70%;
-        padding-top: -4px;
+        width: 70%; /* Adjust to fit mobile layout */
+        float: left;
     }
+    #header .logo-wrap {
+        margin: 25px 0 20px 0; /* Match mobile media query */
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .logo {
+        max-width: 40%; /* Adjust per your media query */
+    }
+    .site-desc {
+        width: 60%; /* Adjust to balance */
+    }
+}
+
+/* Ensure no overflow or artifacts */
+#header {
+    overflow: hidden; /* Contain any stray elements */
+    width: 100%;
+    box-sizing: border-box;
+}
 
     /*---------------------------------------------------
             3.3 Home
@@ -1817,5 +1868,28 @@ body {
         padding: 0;
         margin: 0 0 60px 0;
     }
+}
+
+/* Prevent overflow artifacts in header */
+#header,
+.topbar,
+.logo-wrap {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Reset any stray margins or padding */
+#header * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body padding applies */
+body {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 !important;
 }
 
