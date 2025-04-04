@@ -2259,3 +2259,57 @@ section#contact input.button.full:hover {
     }
 }
 
+/* New rules for filter container spacing */
+.filter-container {
+    display: flex;
+    width: 100%;
+    margin-top: 30px; /* Matches the 30px top margin of #header .logo-wrap on desktop */
+}
+
+.category-filter ul.filter-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.category-filter li {
+    cursor: pointer;
+}
+
+.filter-link {
+    font-size: 18px;
+    color: #595959;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.filter-link:hover,
+.filter-link.active {
+    color: #595959;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.project-item.hidden {
+    display: none;
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 767px) {
+    .filter-container {
+        justify-content: flex-start;
+        margin-top: 25px; /* Matches the 25px top margin of #header .logo-wrap on mobile */
+    }
+    .category-filter ul.filter-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    .filter-link {
+        font-size: 16px;
+    }
+}
+
