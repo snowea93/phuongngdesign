@@ -886,7 +886,16 @@ line-height: 21px;
         margin-bottom: 0;
         position: relative;
     }
-
+/* Mobile adjustments */
+@media screen and (max-width: 767px) {
+    #projects .item {
+        margin-bottom: 20px; /* Mobile-specific spacing */
+    }
+    #projects.stackgrid .item {
+        width: 50%; /* Already set for mobile */
+        margin-bottom: 0; /* Stackgrid still overrides */
+    }
+}
         #projects.stackgrid .item img {
             width: 100%; 
         }
