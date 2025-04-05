@@ -889,7 +889,7 @@ line-height: 21px;
 /* Mobile adjustments */
 @media screen and (max-width: 767px) {
     #projects .item {
-        margin-bottom: 20px; /* Mobile-specific spacing */
+        margin-bottom: 40px; /* Mobile-specific spacing */
     }
     #projects.stackgrid .item {
         width: 50%; /* Already set for mobile */
