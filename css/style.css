@@ -866,7 +866,7 @@ line-height: 21px;
     #projects .item span.category {
         color: #595959;
         display: block;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
         margin-bottom: 20px;
     }
@@ -1045,14 +1045,14 @@ line-height: 21px;
         }
         #projects .item h3 {
             color: #b41f24;
-            font-size: 13px;
+            font-size: 16px;
             margin-bottom: 5 px;
             font-weight: bold;
         }
         #projects .item span.category {
             color: #595959;
             display: block;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 14px;
             margin-bottom: 14px;
         }
@@ -1113,7 +1113,7 @@ line-height: 21px;
         #projects .item span.category {
             color: #595959;
             display: block;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 18px;
             margin-bottom: 14px;
         }
@@ -1176,7 +1176,7 @@ line-height: 21px;
         #projects .item span.category {
             color: #595959;
             display: block;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 18px;
             margin-bottom: 14px;
             width: 300px;
