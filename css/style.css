@@ -802,10 +802,83 @@ line-height: 21px;
     
     iframe { max-width: 100%; }
     
-    .imgwrapper {
-      position: relative;
-       display: inline-block;
+   /* Default stackgrid layout */
+#projects.stackgrid .item {
+    width: 25%;
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn’t spill out */
+}
+
+/* Ensure images scale correctly within their container */
+#projects.stackgrid .item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+/* Container for the image to enforce consistent sizing */
+.imgcon {
+    max-width: 85%;
+    display: block; /* Changed from inline-block to block for better control */
+    position: relative;
+    background: rgba(209, 19, 15, 0);
+    transition: ease 0.3s; /* Smooth transitions */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Ensure the image inside .imgcon respects boundaries */
+.imgcon > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: ease 0.3s;
+    object-fit: cover; /* Ensures image fills container without distortion */
+}
+
+/* Hover effects */
+.imgcon:hover {
+    background: rgba(180, 31, 36, 0.85);
+}
+
+.imgcon:hover > img {
+    -webkit-filter: grayscale(100%) blur(1.5px) contrast(100%);
+    filter: grayscale(100%) blur(1.5px) contrast(100%);
+    mix-blend-mode: multiply;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 1600px) {
+    #projects.stackgrid .item {
+        width: 20%;
     }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1599px) {
+    #projects.stackgrid .item {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    #projects.stackgrid .item {
+        width: 33.333333%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #projects.stackgrid .item {
+        width: 50%;
+    }
+}
+
+/* Clearfix to prevent float issues */
+#projects.stackgrid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
     .imgcon + div {
         position: absolute;
