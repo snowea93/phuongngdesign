@@ -796,60 +796,71 @@ line-height: 21px;
     
     iframe { max-width: 100%; }
     
+  /* Adjust the .imgwrapper and .imgcon styles */
+.imgwrapper {
+    position: relative;
+    display: inline-block;
+    width: 220px; /* Explicit width for consistency */
+    height: 220px; /* Explicit height for consistency */
+    overflow: hidden; /* Clip any overflow from larger images */
+}
+
+.imgcon {
+    width: 100%; /* Fill the .imgwrapper */
+    height: 100%; /* Fill the .imgwrapper */
+    display: block; /* Ensure it behaves as a block element */
+    position: relative;
+    background: rgba(209, 19, 15, 0);
+    transition: ease 0s;
+    -webkit-transition: ease 0s;
+    -moz-transition: ease 0s;
+    -ms-transition: ease 0s;
+    -o-transition: ease 0s;
+    mix-blend-mode: multiply;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.imgcon > img {
+    width: 100%; /* Scale to fit the 256px width */
+    height: 100%; /* Scale to fit the 256px height */
+    object-fit: cover; /* Crop to fill the container while maintaining aspect ratio */
+    display: block;
+    transition: ease 0s;
+    -webkit-transition: ease 0s;
+    -moz-transition: ease 0s;
+    -ms-transition: ease 0s;
+    -o-transition: ease 0s;
+}
+
+/* Hover effects remain the same */
+.imgcon:hover {
+    background: rgba(180, 31, 36, 0.85);
+}
+
+.imgcon:hover > img {
+    -webkit-filter: grayscale(100%) blur(1.5px) contrast(100%);
+    filter: grayscale(100%) blur(1.5px) contrast(100%);
+    mix-blend-mode: multiply;
+}
+
+/* Ensure the grid container respects the fixed size */
+.desktop-3.mobile-half.columns.project-item {
+    width: 25%; /* Default desktop width */
+    float: left;
+    margin-bottom: 20px; /* Consistent spacing */
+    box-sizing: border-box; /* Include padding/margins in width */
+}
+
+@media screen and (max-width: 767px) {
+    .desktop-3.mobile-half.columns.project-item {
+        width: 50%; /* Mobile width */
+        margin-bottom: 0px;
+    }
     .imgwrapper {
-      position: relative;
-       display: inline-block;
+        width: 80%; /* Full width on mobile */
+        height: auto; /* Keep height consistent, adjust if needed */
     }
-
-    .imgcon + div {
-        position: absolute;
-        left: 42%;
-        top: 44%;
-        color: white;
-        text-decoration: underline;
-        opacity:0;
-        display: block;
-        pointer-events: none;
-        font-size: 18px;
-        letter-spacing: 4px;
-    }
-
-    .imgcon {
-        max-width: 85%;
-        display: inline-block;
-        position: relative;
-        background: rgba(209, 19, 15, 0);
-        transition: ease 0s;
-        -webkit-transition: ease 0s;
-        -moz-transition: ease 0s;
-        -ms-transition: ease 0s;
-        -o-transition: ease 0s;
-        mix-blend-mode: multiply;
-    }
-    .imgcon > img {
-        display: block;
-        transition: ease 0s;
-        -webkit-transition: ease 0s;
-        -moz-transition: ease 0s;
-        -ms-transition: ease 0s;
-        -o-transition: ease 0s;
-    }
-    .imgcon:hover {
-        background: #b41f24;
-        background: rgba(180, 31, 36, 0.85);
-    }
-    .imgcon:hover > img {
-        z-index: -1;
-        -webkit-filter: grayscale(100%) blur(1.5px) contrast(100%);
-        filter: grayscale(100%) blur(1.5px) contrast(100%);
-        mix-blend-mode: multiply;
-    }
-
-    .imgcon:hover + div {
-        display: block;
-        opacity: 1;
-        z-index: 1;
-    }
+}
 
     #projects .item { margin-bottom: 60px; }
 
